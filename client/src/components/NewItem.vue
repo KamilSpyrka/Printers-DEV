@@ -31,7 +31,7 @@
         required :rules="required"> </textarea>             
 
         <input type="submit" class="send" name="create"
-        value="Create Auction" @click="create">
+        value="Add printer" @click="create">
       </div> 
     </section>
   </div>

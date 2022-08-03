@@ -15,7 +15,17 @@
         <input type="text" id="title" name ="title" class="btn"
         placeholder="Title" v-model="item.title" maxlength="50"
         required :rules="required">
-        
+
+        <select id="printerType" name="printerType" class="btn"
+        placeholder="Printer type" v-model="item.printerType"
+        required :rules="required">
+          <option value="select" disabled selected>Select Printer Type</option>
+          <option value="Laser Printer">Laser Printer</option>
+          <option value="Solid Ink Printer">Solid Ink Printer</option>
+          <option value="LED Printer">LED Printer</option>
+          <option value="3D Printer">3D Printer</option>
+        </select>  
+
         <textarea id="description" name ="description" class="btn"
         placeholder="Description" v-model="item.description"
         required :rules="required"> </textarea>             
@@ -38,7 +48,8 @@ export default {
         item: {
           title: null,
           description: null,
-          username: null
+          username: null,
+          printerType: null
         },
 
         error: null,
